@@ -91,26 +91,29 @@ namespace _10_CsharpDers
             #region Ürün Güncelleme
 
             Console.Write("Güncellenecek Ürün Id :");
-            int productId=int.Parse(Console.ReadLine());
+            int productId = int.Parse(Console.ReadLine());
 
             Console.Write("Güncellenecek Ürün Adı :");
-            string productName=Console.ReadLine();
+            string productName = Console.ReadLine();
 
             Console.Write("Güncellenecek Ürün Fiyat :");
-            decimal productPrice=decimal.Parse(Console.ReadLine());
-               
+            decimal productPrice = decimal.Parse(Console.ReadLine());
+
             SqlConnection connection = new SqlConnection("Data Source = HDFAVR890\\SQLEXPRESS; initial Catalog = EgitimKampiDB; integrated security = true");
 
             connection.Open();
             SqlCommand command = new SqlCommand("Update TblProduct Set ProductName=@productName,ProductPrice=@productPrice where  ProductId=@productId", connection);
-            command.Parameters.AddWithValue("@productName",productName);
-            command.Parameters.AddWithValue("@productPrice",productPrice);
-            command.Parameters.AddWithValue("@productId",productId);
+            command.Parameters.AddWithValue("@productName", productName);
+            command.Parameters.AddWithValue("@productPrice", productPrice);
+            command.Parameters.AddWithValue("@productId", productId);
             command.ExecuteNonQuery();
 
             connection.Close();
             Console.WriteLine("Güncelleme Başarılı ");
+            Console.WriteLine();
+
             #endregion
+
             Console.Read();
         }
     }
