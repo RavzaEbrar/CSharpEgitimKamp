@@ -113,21 +113,23 @@ namespace _08_CsharpDers
 
             #endregion
 
-            string ExamResult(string student,int exam1,int  exam2,int exam3)
-            {
-                int result=(exam1+exam2+exam3)/3;
-                if (result >= 50)
-                {
-                    return "öğrenci sınavı geçti"+"ortalama :"+result;
-                }
-                else
-                {
-                    return "öğrenci başarısız oldu"+"ortalama :"+result;
-                }
-            }
-            Console.WriteLine(ExamResult("ali",25,41,85));
-            Console.WriteLine(ExamResult("ayşe",10,88,33));
+            #region örnek uygulama
+            //string ExamResult(string student,int exam1,int  exam2,int exam3)
+            //{
+            //    int result=(exam1+exam2+exam3)/3;
+            //    if (result >= 50)
+            //    {
+            //        return "öğrenci sınavı geçti"+"ortalama :"+result;
+            //    }
+            //    else
+            //    {
+            //        return "öğrenci başarısız oldu"+"ortalama :"+result;
+            //    }
+            //}
 
+            //Console.WriteLine(ExamResult("ali",25,41,85));
+            //Console.WriteLine(ExamResult("ayşe",10,88,33));
+            #endregion
 
             Console.Read();
         }
